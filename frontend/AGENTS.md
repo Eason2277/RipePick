@@ -29,6 +29,14 @@ Run lint and typecheck before declaring any task done.
 - Import `Link`, `router`, and `useLocalSearchParams` from `expo-router`.
 - Docs: https://docs.expo.dev/router/introduction.md
 
+## TypeScript
+
+- Keep TypeScript strict checks passing. Do not use `any` to bypass type errors.
+- Define explicit types at component boundaries and for API requests, API responses, and business data.
+- Add named types for business data when they improve readability or maintainability, such as a `Scenario` type for quick-prompt options.
+- Prefer TypeScript inference for local variables, React callback parameters, and standard component props; avoid redundant annotations.
+- Code examples must include necessary types and valid React Native prop names, and should pass `npx tsc --noEmit`.
+
 ## Building with EAS
 
 Use EAS to build, sign, and submit the app in the cloud (`eas build`, `eas submit`) and to ship over-the-air updates (`eas update`) — no local Xcode or Android Studio required. Run EAS CLI as `bunx eas-cli <command>` in Bun projects, or `npx eas-cli@latest <command>` otherwise; substitute that for bare `eas` in docs examples.
