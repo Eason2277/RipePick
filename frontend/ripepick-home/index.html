@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#f5f1e9" />
+    <title>RipePick · 今天想怎么吃</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="screen home-screen" id="home-screen" aria-labelledby="page-title">
+        <header class="app-header">
+          <a class="brand-lockup" href="#home-screen" aria-label="RipePick 首页">
+            <span class="brand-mark" aria-hidden="true">R</span>
+            <span><strong>RipePick</strong><small>今天，吃得刚刚好</small></span>
+          </a>
+          <button class="more-button" type="button" aria-label="更多选项">•••</button>
+        </header>
+
+        <section class="intro">
+          <p class="eyebrow">YOUR EVERYDAY FRUIT COMPANION</p>
+          <h1 id="page-title">今天想怎么吃？</h1>
+          <p class="intro-copy">告诉我此刻的饮食状态，<br />我帮你找到一份刚刚好的水果早餐。</p>
+        </section>
+
+        <form class="prompt-card" id="prompt-form">
+          <label for="prompt">描述一下现在的情况</label>
+          <textarea id="prompt" rows="2" maxlength="600" placeholder="例如：昨晚吃得比较油腻，今天早上吃什么比较好？" aria-describedby="input-status"></textarea>
+          <div class="prompt-divider"></div>
+          <div class="prompt-actions">
+            <div class="scenario-list" aria-label="快捷场景">
+              <button type="button" data-prompt="昨晚吃得比较油腻，今天早上想吃得清淡一些。">清淡一点</button>
+              <button type="button" data-prompt="今天早上想准备一份简单的水果早餐。">水果早餐</button>
+              <button type="button" data-prompt="今天想吃当季水果，帮我搭配一份早餐。">当季水果</button>
+            </div>
+            <button class="send-button" type="submit" aria-label="提交饮食场景" disabled>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 19V5m-6 6 6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </div>
+          <p id="input-status" class="sr-only" role="status" aria-live="polite">请输入当前饮食状态。</p>
+        </form>
+
+        <section class="season-section" aria-labelledby="season-title">
+          <div class="section-label">DISCOVER</div>
+          <div class="section-heading">
+            <h2 id="season-title">现在正当季</h2>
+            <button type="button" class="text-button">查看全部</button>
+          </div>
+          <div class="season-track">
+            <button class="season-card" type="button" data-prompt="现在有哪些当季水果适合搭配早餐？">
+              <img src="./assets/fruit.jpg" alt="多种新鲜水果拼盘" width="700" height="525" />
+              <span class="season-meta"><span><strong>当季灵感</strong><small>先选水果，再完成早餐</small></span><span aria-hidden="true">→</span></span>
+            </button>
+            <button class="season-card" type="button" data-prompt="想用当季水果准备一份简单早餐，请先了解我的情况。">
+              <img src="./assets/breakfast.jpg" alt="水果与早餐组合" width="900" height="675" />
+              <span class="season-meta"><span><strong>早餐搭配</strong><small>水果与基础早餐食物</small></span><span aria-hidden="true">→</span></span>
+            </button>
+          </div>
+          <p class="data-note">具体当季信息将在接入结构化水果数据后展示。</p>
+        </section>
+
+        <nav class="tab-bar" aria-label="主要导航">
+          <button type="button" class="tab-item active" aria-current="page"><span aria-hidden="true">✦</span><small>问问</small></button>
+          <button type="button" class="tab-item"><span class="tab-disc" aria-hidden="true"></span><small>当季</small></button>
+          <button type="button" class="tab-item"><span aria-hidden="true">♡</span><small>收藏</small></button>
+          <button type="button" class="tab-item"><span aria-hidden="true">■</span><small>设置</small></button>
+        </nav>
+      </section>
+
+      <section class="screen analysis-screen" id="analysis-screen" aria-labelledby="analysis-title" hidden>
+        <header class="analysis-header">
+          <button type="button" id="back-home" aria-label="返回首页">‹ <span>RipePick</span></button>
+        </header>
+        <div class="analysis-body">
+          <div class="analysis-art" aria-hidden="true"><span></span><i></i></div>
+          <p class="eyebrow">UNDERSTANDING YOUR CONTEXT</p>
+          <h1 id="analysis-title">正在理解你的场景</h1>
+          <p>先弄清此刻的状态，再寻找合适的水果与早餐搭配。</p>
+
+          <div class="progress" aria-label="正在分析"><span></span></div>
+
+          <section class="recognized" aria-labelledby="recognized-title">
+            <h2 id="recognized-title">已识别</h2>
+            <dl>
+              <div><dt>时间</dt><dd id="recognized-time">待确认</dd></div>
+              <div><dt>目标</dt><dd id="recognized-goal">待确认</dd></div>
+              <div><dt>背景</dt><dd id="recognized-context">待确认</dd></div>
+            </dl>
+          </section>
+
+          <blockquote id="submitted-prompt"></blockquote>
+          <aside class="privacy-note">我们只使用完成这次建议所需的信息，不建立长期健康档案。</aside>
+          <p class="prototype-note">交互原型到此为止；接入结构化数据与推荐服务后，下一步将展示主方案、份量提示、替代方案和注意事项。</p>
+        </div>
+      </section>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>

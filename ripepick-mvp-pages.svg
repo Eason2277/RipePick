@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1900" height="980" viewBox="0 0 1900 980">
+  <style>
+    .s{font-family:Arial,'PingFang SC','Microsoft YaHei',sans-serif}.ink{fill:#183B32}.muted{fill:#6B7B73}.green{fill:#2F765C}.title{font-size:24px;font-weight:700}.b{font-size:14px}.sm{font-size:11px}.bold{font-weight:700}.stroke{stroke:#D8E4DB}
+  </style>
+  <text class="s ink bold" x="56" y="48" font-size="20">RipePick · MVP screen set</text>
+  <text class="s muted" x="56" y="75" font-size="13">主流程与支撑页面：场景输入 / 推荐对话 / 当季浏览 / 水果详情</text>
+
+  <!-- assistant recommendation -->
+  <g transform="translate(56 112)">
+    <rect width="420" height="790" rx="20" fill="#F7F9F5" stroke="#D5E1D9" stroke-width="2"/>
+    <rect width="420" height="68" rx="20" fill="#FFFFFF"/><text class="s ink bold" x="28" y="40" font-size="17">‹  今日早餐建议</text><text class="s muted" x="344" y="40" font-size="11">新问题</text>
+    <rect x="28" y="93" width="364" height="42" rx="12" fill="#EAF3E8"/><text class="s green sm" x="45" y="119">已理解：今天早上 · 想清淡一些 · 昨晚饮食偏油腻</text>
+    <text class="s ink title" x="28" y="183">一份简单的早餐方案</text>
+    <rect x="28" y="209" width="364" height="222" rx="16" fill="#FFFFFF" stroke="#D5E1D9"/>
+    <circle cx="98" cy="296" r="57" fill="#F6C95D"/><path d="M65 301 Q98 250 131 301 Q98 345 65 301Z" fill="#F29A59"/><path d="M98 240 Q96 226 114 220" fill="none" stroke="#34755B" stroke-width="6" stroke-linecap="round"/>
+    <text class="s green bold" x="169" y="258" font-size="11">主推荐 · 水果数据库</text><text class="s ink bold" x="169" y="295" font-size="25">木瓜</text><text class="s muted sm" x="169" y="320">Papaya · 约 150g</text><text class="s ink b" x="169" y="355">无糖酸奶 + 全麦吐司</text><text class="s muted sm" x="169" y="380">完成一顿简单早餐</text>
+    <text class="s ink bold" x="28" y="470" font-size="14">为什么这样建议</text><text class="s muted b" x="28" y="499">口感柔和，搭配酸奶和全麦吐司，</text><text class="s muted b" x="28" y="523">比只吃水果更接近一顿完整早餐。</text>
+    <rect x="28" y="550" width="364" height="66" rx="12" fill="#FFF7E6"/><text class="s" x="45" y="577" fill="#8B652B" font-size="11" font-weight="700">份量与注意事项</text><text class="s" x="45" y="600" fill="#8B652B" font-size="11">木瓜约 150g；过敏或饮食限制请按个人情况调整。</text>
+    <text class="s muted sm" x="28" y="655">替代方案</text><rect x="28" y="670" width="364" height="52" rx="12" fill="#FFFFFF" stroke="#D5E1D9"/><text class="s ink b" x="45" y="702">香蕉半根 + 无糖酸奶</text><text class="s green" x="360" y="702">›</text>
+    <text class="s muted" x="28" y="760" font-size="10">依据：口味 / 早餐搭配 / 份量字段 · 数据更新时间：待接入</text>
+  </g>
+
+  <!-- browse -->
+  <g transform="translate(510 112)">
+    <rect width="420" height="790" rx="20" fill="#F7F9F5" stroke="#D5E1D9" stroke-width="2"/>
+    <rect width="420" height="68" rx="20" fill="#FFFFFF"/><text class="s ink bold" x="28" y="40" font-size="17">RipePick</text><text class="s green" x="340" y="40" font-size="12">助手</text>
+    <text class="s ink title" x="28" y="123">当季水果</text><text class="s muted sm" x="28" y="150">帮助你验证推荐，也可以独立探索</text>
+    <rect x="28" y="174" width="364" height="44" rx="22" fill="#FFFFFF" stroke="#C9D8CE"/><text class="s muted b" x="48" y="202">搜索水果名称</text><text class="s green" x="362" y="202">⌕</text>
+    <rect x="28" y="242" width="364" height="54" rx="12" fill="#EAF3E8"/><text class="s green bold" x="45" y="265" font-size="12">2026 年 9 月</text><text class="s muted sm" x="45" y="284">当前月份 · 可横向切换月份</text><text class="s green" x="360" y="271">›</text>
+    <text class="s ink bold" x="28" y="340" font-size="14">本月推荐</text><text class="s muted sm" x="320" y="340">峰值季节</text>
+    <g transform="translate(28 360)"><rect width="174" height="145" rx="14" fill="#FFFFFF" stroke="#D5E1D9"/><circle cx="87" cy="58" r="38" fill="#F6C95D"/><path d="M62 62 Q87 25 112 62 Q87 91 62 62Z" fill="#F29A59"/><text class="s ink bold" x="16" y="116" font-size="15">木瓜</text><rect x="104" y="103" width="52" height="22" rx="11" fill="#EAF3E8"/><text class="s green" x="116" y="118" font-size="10">适合早餐</text></g>
+    <g transform="translate(218 360)"><rect width="174" height="145" rx="14" fill="#FFFFFF" stroke="#D5E1D9"/><circle cx="87" cy="58" r="38" fill="#E98A61"/><path d="M54 61 Q87 35 120 61 Q87 92 54 61Z" fill="#F5C16B"/><text class="s ink bold" x="16" y="116" font-size="15">桃子</text><rect x="108" y="103" width="48" height="22" rx="11" fill="#FFF0D9"/><text class="s" x="119" y="118" fill="#9B652E" font-size="10">当季</text></g>
+    <g transform="translate(28 525)"><rect width="174" height="145" rx="14" fill="#FFFFFF" stroke="#D5E1D9"/><circle cx="87" cy="58" r="38" fill="#F8D261"/><path d="M53 55 Q87 35 121 55 Q87 88 53 55Z" fill="#F2A65A"/><text class="s ink bold" x="16" y="116" font-size="15">梨</text><rect x="104" y="103" width="52" height="22" rx="11" fill="#EAF3E8"/><text class="s green" x="116" y="118" font-size="10">清爽</text></g>
+    <g transform="translate(218 525)"><rect width="174" height="145" rx="14" fill="#FFFFFF" stroke="#D5E1D9"/><circle cx="87" cy="58" r="38" fill="#DE7860"/><path d="M60 55 Q87 38 114 55 Q87 83 60 55Z" fill="#F6C35E"/><text class="s ink bold" x="16" y="116" font-size="15">石榴</text><rect x="108" y="103" width="48" height="22" rx="11" fill="#FFF0D9"/><text class="s" x="119" y="118" fill="#9B652E" font-size="10">当季</text></g>
+    <text class="s muted" x="28" y="733" font-size="10">数据来源和更新时间在详情页中保留可追溯信息</text>
+  </g>
+
+  <!-- fruit detail -->
+  <g transform="translate(964 112)">
+    <rect width="420" height="790" rx="20" fill="#F7F9F5" stroke="#D5E1D9" stroke-width="2"/>
+    <rect width="420" height="68" rx="20" fill="#FFFFFF"/><text class="s ink bold" x="28" y="40" font-size="17">‹  水果详情</text><text class="s muted" x="352" y="40" font-size="11">分享</text>
+    <rect x="28" y="94" width="364" height="190" rx="16" fill="#FFF7E6"/><circle cx="120" cy="184" r="64" fill="#F6C95D"/><path d="M81 188 Q120 130 159 188 Q120 235 81 188Z" fill="#F29A59"/><path d="M120 120 Q118 104 138 98" fill="none" stroke="#34755B" stroke-width="7" stroke-linecap="round"/><text class="s ink bold" x="210" y="156" font-size="26">木瓜</text><text class="s muted b" x="210" y="183">Papaya</text><rect x="210" y="204" width="76" height="24" rx="12" fill="#F4E0AA"/><text class="s" x="225" y="220" fill="#8B652B" font-size="10">热带水果</text>
+    <text class="s ink bold" x="28" y="331" font-size="14">概览</text><text class="s green" x="106" y="331" font-size="14">挑选与保存</text><line x1="28" y1="345" x2="392" y2="345" stroke="#D5E1D9"/><line x1="28" y1="345" x2="80" y2="345" stroke="#2F765C" stroke-width="2"/>
+    <text class="s ink bold" x="28" y="385" font-size="14">季节</text><text class="s muted sm" x="28" y="410">全年可见 · 9 月适合度较高</text><rect x="28" y="430" width="364" height="12" rx="6" fill="#E3ECE4"/><rect x="104" y="430" width="90" height="12" rx="6" fill="#6EAA82"/><text class="s muted" x="28" y="466" font-size="10">1 月</text><text class="s muted" x="365" y="466" font-size="10">12 月</text>
+    <text class="s ink bold" x="28" y="510" font-size="14">口味与营养</text><text class="s muted b" x="28" y="540">甜度  7 / 10</text><rect x="130" y="531" width="230" height="10" rx="5" fill="#E3ECE4"/><rect x="130" y="531" width="161" height="10" rx="5" fill="#F2B85A"/><text class="s muted b" x="28" y="573">酸度  2 / 10</text><rect x="130" y="564" width="230" height="10" rx="5" fill="#E3ECE4"/><rect x="130" y="564" width="46" height="10" rx="5" fill="#7FB58D"/><text class="s muted b" x="28" y="606">膳食纤维</text><text class="s ink b" x="130" y="606">约 1.7g / 100g</text>
+    <rect x="28" y="648" width="364" height="74" rx="12" fill="#FFFFFF" stroke="#D5E1D9"/><text class="s green bold" x="45" y="675" font-size="11">早餐搭配</text><text class="s muted sm" x="45" y="699">可与无糖酸奶、全麦吐司组合使用</text>
+    <text class="s muted" x="28" y="760" font-size="10">数据来源：结构化水果数据 · 更新时间：待接入</text>
+  </g>
+
+  <!-- states panel -->
+  <g transform="translate(1418 112)">
+    <rect width="420" height="790" rx="20" fill="#F7F9F5" stroke="#D5E1D9" stroke-width="2"/>
+    <text class="s ink title" x="28" y="58">必要的反馈状态</text><text class="s muted sm" x="28" y="84">保证推荐失败时仍然可理解、可继续</text>
+    <text class="s ink bold" x="28" y="137" font-size="14">信息不足 · 只追问必要条件</text><rect x="28" y="154" width="364" height="76" rx="14" fill="#FFFFFF" stroke="#D5E1D9"/><text class="s ink b" x="46" y="184">想先确认一下：你是准备早餐，</text><text class="s ink b" x="46" y="207">还是想找今天可以吃的水果？</text>
+    <text class="s ink bold" x="28" y="278" font-size="14">无匹配结果 · 提供普通替代</text><rect x="28" y="295" width="364" height="82" rx="14" fill="#FFF7E6"/><text class="s" x="46" y="325" fill="#8B652B" font-size="12" font-weight="700">暂时没有符合这些条件的水果</text><text class="s" x="46" y="350" fill="#8B652B" font-size="11">可以放宽口味条件，或先查看当季水果。</text>
+    <text class="s ink bold" x="28" y="425" font-size="14">AI 服务不可用 · 静态降级</text><rect x="28" y="442" width="364" height="96" rx="14" fill="#FFFFFF" stroke="#D5E1D9"/><text class="s muted b" x="46" y="475">现在无法生成对话建议。</text><text class="s muted sm" x="46" y="500">你仍可以浏览水果和查看挑选、保存信息。</text><rect x="46" y="512" width="102" height="20" rx="10" fill="#EAF3E8"/><text class="s green" x="63" y="526" font-size="10">去浏览水果</text>
+    <text class="s ink bold" x="28" y="602" font-size="14">流式回复 · 明确加载状态</text><rect x="28" y="619" width="364" height="68" rx="14" fill="#FFFFFF" stroke="#D5E1D9"/><circle cx="54" cy="653" r="5" fill="#6EAA82"/><circle cx="72" cy="653" r="5" fill="#B6D0B7"/><circle cx="90" cy="653" r="5" fill="#DDE9DC"/><text class="s muted sm" x="112" y="657">正在从水果数据中整理建议…</text>
+    <text class="s muted" x="28" y="754" font-size="10">对应 MVP Brief：快速响应、明确边界、可追溯依据</text>
+  </g>
+</svg>

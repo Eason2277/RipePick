@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="844" viewBox="0 0 390 844">
+  <style>
+    text { font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Helvetica Neue", sans-serif; }
+    .ink { fill: #172B25; }
+    .muted { fill: #76837E; }
+    .green { fill: #2D765C; }
+    .small { font-size: 11px; }
+    .label { font-size: 10px; font-weight: 700; letter-spacing: 1.2px; }
+  </style>
+
+  <rect width="390" height="844" fill="#F5F6F2"/>
+  <rect x="0" y="0" width="390" height="38" fill="#F5F6F2"/>
+  <text x="24" y="23" class="ink" font-size="12" font-weight="700">9:41</text>
+  <text x="335" y="23" class="ink" font-size="11">▮▮▮  ◉</text>
+
+  <rect x="0" y="38" width="390" height="59" fill="#F5F6F2"/>
+  <rect x="20" y="51" width="34" height="34" rx="12" fill="#2D765C"/>
+  <text x="37" y="74" fill="#FFFFFF" font-size="17" text-anchor="middle" font-weight="800">R</text>
+  <text x="66" y="68" class="ink" font-size="15" font-weight="700">RipePick</text>
+  <text x="66" y="82" class="muted" font-size="9">今天，吃得刚刚好</text>
+  <circle cx="357" cy="68" r="17" fill="#E1EBD9"/>
+  <text x="357" y="73" class="green" font-size="16" text-anchor="middle">⋯</text>
+
+  <text x="24" y="142" class="green label">YOUR EVERYDAY FRUIT COMPANION</text>
+  <text x="24" y="190" class="ink" font-size="42" font-weight="700" letter-spacing="-2">今天想怎么吃？</text>
+  <text x="24" y="220" class="muted" font-size="14">告诉我你此刻的饮食状态，</text>
+  <text x="24" y="241" class="muted" font-size="14">我帮你找到一份刚刚好的水果早餐。</text>
+
+  <rect x="24" y="273" width="342" height="206" rx="18" fill="#FFFFFF" stroke="#DFE7E0"/>
+  <text x="44" y="302" class="ink" font-size="12" font-weight="700">描述一下现在的情况</text>
+  <text x="44" y="341" fill="#B6C0BA" font-size="17">例如：昨晚吃得比较油腻，</text>
+  <text x="44" y="367" fill="#B6C0BA" font-size="17">今天早上吃什么比较好？</text>
+  <line x1="44" y1="393" x2="346" y2="393" stroke="#EEF2EE"/>
+  <rect x="44" y="414" width="70" height="28" rx="14" fill="#EFF5EC"/>
+  <text x="79" y="432" class="green" font-size="11" text-anchor="middle">清淡一点</text>
+  <rect x="122" y="414" width="70" height="28" rx="14" fill="#EFF5EC"/>
+  <text x="157" y="432" class="green" font-size="11" text-anchor="middle">水果早餐</text>
+  <rect x="200" y="414" width="70" height="28" rx="14" fill="#EFF5EC"/>
+  <text x="235" y="432" class="green" font-size="11" text-anchor="middle">当季水果</text>
+  <circle cx="331" cy="428" r="18" fill="#2D765C"/>
+  <text x="331" y="434" fill="#FFFFFF" font-size="19" text-anchor="middle">↑</text>
+
+  <text x="24" y="535" class="muted label">DISCOVER</text>
+  <text x="24" y="570" class="ink" font-size="28" font-weight="700">现在正当季</text>
+  <text x="310" y="568" class="green" font-size="11">查看全部  →</text>
+
+  <rect x="24" y="592" width="160" height="126" rx="15" fill="#FFF3D0"/>
+  <circle cx="90" cy="643" r="35" fill="#F4C95D"/>
+  <path d="M64 647 Q90 607 116 647 Q90 682 64 647Z" fill="#E77857"/>
+  <path d="M90 611 Q88 599 104 595" fill="none" stroke="#2D765C" stroke-width="5" stroke-linecap="round"/>
+  <text x="40" y="695" class="ink" font-size="14" font-weight="700">木瓜</text>
+  <text x="40" y="710" class="muted" font-size="10">口感柔和 · 早餐友好</text>
+  <text x="160" y="695" class="muted" font-size="16">→</text>
+
+  <rect x="198" y="592" width="168" height="126" rx="15" fill="#FAE5DC"/>
+  <circle cx="264" cy="643" r="35" fill="#E77857"/>
+  <path d="M239 646 Q264 620 289 646 Q264 674 239 646Z" fill="#F6B56D"/>
+  <path d="M264 610 Q262 599 278 596" fill="none" stroke="#2D765C" stroke-width="5" stroke-linecap="round"/>
+  <text x="214" y="695" class="ink" font-size="14" font-weight="700">桃子</text>
+  <text x="214" y="710" class="muted" font-size="10">香甜多汁 · 9 月当季</text>
+  <text x="342" y="695" class="muted" font-size="16">→</text>
+
+  <line x1="24" y1="752" x2="366" y2="752" stroke="#DFE7E0"/>
+  <text x="65" y="790" class="green" font-size="20" text-anchor="middle">✦</text>
+  <text x="65" y="811" class="green" font-size="9" text-anchor="middle" font-weight="700">问问</text>
+  <text x="163" y="790" class="muted" font-size="20" text-anchor="middle">◒</text>
+  <text x="163" y="811" class="muted" font-size="9" text-anchor="middle">当季</text>
+  <text x="260" y="790" class="muted" font-size="20" text-anchor="middle">♡</text>
+  <text x="260" y="811" class="muted" font-size="9" text-anchor="middle">收藏</text>
+  <text x="337" y="790" class="muted" font-size="20" text-anchor="middle">⚙</text>
+  <text x="337" y="811" class="muted" font-size="9" text-anchor="middle">设置</text>
+</svg>

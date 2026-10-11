@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1640" height="900" viewBox="0 0 1640 900">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#2F765C"/></marker>
+    <marker id="arrow-muted" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10Z" fill="#9BAAA2"/></marker>
+    <style>.s{font-family:Arial,'PingFang SC','Microsoft YaHei',sans-serif}.ink{fill:#183B32}.muted{fill:#687A71}.green{fill:#2F765C}.sm{font-size:12px}.body{font-size:14px}.bold{font-weight:700}</style>
+  </defs>
+  <rect width="1640" height="900" fill="#F7F9F5"/>
+  <text class="s ink bold" x="56" y="55" font-size="24">RipePick MVP · 用户路径与页面关系</text>
+  <text class="s muted" x="56" y="84" font-size="13">主流程先完成一次饮食决策；浏览和详情用于验证推荐，异常状态保证用户仍能继续。</text>
+  <rect x="56" y="112" width="1528" height="360" rx="20" fill="#FFFFFF" stroke="#D8E4DB"/>
+  <text class="s green bold" x="86" y="152" font-size="13">主流程 · 完成一次早餐决策</text>
+
+  <!-- primary nodes -->
+  <g transform="translate(88 196)"><rect width="270" height="190" rx="16" fill="#F1F7EE" stroke="#A9C9AD" stroke-width="2"/><text class="s green bold" x="22" y="34" font-size="12">01 · Home</text><text class="s ink bold" x="22" y="72" font-size="21">描述当前场景</text><text class="s muted body" x="22" y="108">输入饮食状态 + 时间 + 目标</text><rect x="22" y="132" width="180" height="32" rx="16" fill="#2F765C"/><text class="s" x="60" y="153" fill="#FFFFFF" font-size="12" font-weight="700">获得建议  →</text></g>
+  <path d="M358 291 H445" stroke="#2F765C" stroke-width="3" fill="none" marker-end="url(#arrow)"/><text class="s green" x="370" y="273" font-size="11">提交问题</text>
+  <g transform="translate(460 196)"><rect width="270" height="190" rx="16" fill="#F4F8F3" stroke="#A9C9AD" stroke-width="2"/><text class="s green bold" x="22" y="34" font-size="12">02 · Assistant</text><text class="s ink bold" x="22" y="72" font-size="21">理解场景</text><text class="s muted body" x="22" y="108">识别时间、状态与目标</text><rect x="22" y="132" width="220" height="32" rx="16" fill="#EAF3E8"/><text class="s green" x="39" y="153" font-size="12">调用水果 / 搭配数据</text></g>
+  <path d="M730 291 H817" stroke="#2F765C" stroke-width="3" fill="none" marker-end="url(#arrow)"/><text class="s green" x="743" y="273" font-size="11">场景明确</text>
+  <g transform="translate(832 196)"><rect width="270" height="190" rx="16" fill="#FFF8E9" stroke="#E7C776" stroke-width="2"/><text class="s" x="22" y="34" fill="#9B6A2B" font-size="12" font-weight="700">03 · Recommendation</text><text class="s ink bold" x="22" y="72" font-size="21">给出一份方案</text><text class="s muted body" x="22" y="108">主推荐 + 早餐搭配 + 份量</text><rect x="22" y="132" width="220" height="32" rx="16" fill="#F4E0AA"/><text class="s" x="42" y="153" fill="#8B652B" font-size="12">理由 / 注意事项 / 替代</text></g>
+  <path d="M1102 250 C1160 250 1160 200 1218 200" stroke="#2F765C" stroke-width="3" fill="none" marker-end="url(#arrow)"/><text class="s green" x="1134" y="186" font-size="11">验证推荐</text>
+  <g transform="translate(1232 148)"><rect width="270" height="125" rx="16" fill="#FFFFFF" stroke="#A9C9AD" stroke-width="2"/><text class="s green bold" x="22" y="34" font-size="12">04A · Fruit Detail</text><text class="s ink bold" x="22" y="68" font-size="18">查看木瓜详情</text><text class="s muted sm" x="22" y="94">季节 / 口味 / 营养 / 搭配依据</text></g>
+  <path d="M1102 340 C1160 340 1160 410 1218 410" stroke="#2F765C" stroke-width="3" fill="none" marker-end="url(#arrow)"/><text class="s green" x="1133" y="420" font-size="11">探索当季</text>
+  <g transform="translate(1232 348)"><rect width="270" height="125" rx="16" fill="#FFFFFF" stroke="#A9C9AD" stroke-width="2"/><text class="s green bold" x="22" y="34" font-size="12">04B · Browse</text><text class="s ink bold" x="22" y="68" font-size="18">浏览当季水果</text><text class="s muted sm" x="22" y="94">月份 / 搜索 / 水果卡片 / 过滤</text></g>
+
+  <rect x="56" y="514" width="1528" height="330" rx="20" fill="#FBFCFA" stroke="#D8E4DB"/>
+  <text class="s muted bold" x="86" y="554" font-size="13">异常与降级 · 不阻断用户继续行动</text>
+  <g transform="translate(88 595)"><rect width="300" height="150" rx="16" fill="#FFFFFF" stroke="#D8E4DB"/><text class="s ink bold" x="22" y="34" font-size="15">信息不足</text><text class="s muted body" x="22" y="68">只追问影响推荐的必要条件</text><rect x="22" y="98" width="210" height="28" rx="14" fill="#EAF3E8"/><text class="s green" x="42" y="117" font-size="11">补充条件 → 回到 Assistant</text></g>
+  <path d="M238 595 C238 530 570 530 570 386" stroke="#9BAAA2" stroke-width="2" fill="none" stroke-dasharray="7 6" marker-end="url(#arrow-muted)"/>
+  <g transform="translate(480 595)"><rect width="300" height="150" rx="16" fill="#FFF8E9" stroke="#E7C776"/><text class="s" x="22" y="34" fill="#8B652B" font-weight="700" font-size="15">无匹配结果</text><text class="s muted body" x="22" y="68">说明原因，给出普通替代建议</text><rect x="22" y="98" width="210" height="28" rx="14" fill="#F4E0AA"/><text class="s" x="42" y="117" fill="#8B652B" font-size="11">放宽条件 → 回到 Assistant</text></g>
+  <path d="M630 595 C630 530 670 530 670 386" stroke="#9BAAA2" stroke-width="2" fill="none" stroke-dasharray="7 6" marker-end="url(#arrow-muted)"/>
+  <g transform="translate(872 595)"><rect width="300" height="150" rx="16" fill="#FFFFFF" stroke="#D8E4DB"/><text class="s ink bold" x="22" y="34" font-size="15">AI 服务不可用</text><text class="s muted body" x="22" y="68">保留静态浏览和水果详情</text><rect x="22" y="98" width="210" height="28" rx="14" fill="#EAF3E8"/><text class="s green" x="42" y="117" font-size="11">去 Browse → 继续探索</text></g>
+  <path d="M1022 595 C1022 540 1300 540 1300 473" stroke="#9BAAA2" stroke-width="2" fill="none" stroke-dasharray="7 6" marker-end="url(#arrow-muted)"/>
+  <g transform="translate(1264 595)"><rect width="270" height="150" rx="16" fill="#FFFFFF" stroke="#D8E4DB"/><text class="s ink bold" x="22" y="34" font-size="15">继续追问</text><text class="s muted body" x="22" y="68">调整口味、替代水果或早餐</text><rect x="22" y="98" width="196" height="28" rx="14" fill="#EAF3E8"/><text class="s green" x="42" y="117" font-size="11">新问题 → Assistant</text></g>
+  <text class="s muted" x="86" y="812" font-size="11">线条说明：绿色实线 = 主流程 / 探索分支；灰色虚线 = 异常、降级或回流。</text>
+</svg>

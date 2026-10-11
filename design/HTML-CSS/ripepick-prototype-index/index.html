@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RipePick MVP Prototype Inventory</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div>
+        <p class="eyebrow">RipePick MVP</p>
+        <h1>Prototype inventory</h1>
+        <p class="lede">One overview first, then the screens that complete the recommendation journey.</p>
+      </div>
+      <a class="doc-link" href="../../docs/PROTOTYPE_INVENTORY.md">Open inventory notes</a>
+    </header>
+
+    <main>
+      <section class="overview-section" aria-labelledby="overview-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">00 · Overview</p>
+            <h2 id="overview-title">Page relationship map</h2>
+          </div>
+          <span class="status-chip">Start here</span>
+        </div>
+        <div class="overview-frame">
+          <img src="../../docs/ripepick-mvp-page-map.svg" alt="RipePick MVP page relationship map" />
+        </div>
+      </section>
+
+      <section class="screen-section" aria-labelledby="core-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">A · Core journey</p>
+            <h2 id="core-title">A complete breakfast decision</h2>
+          </div>
+          <span class="section-note">Input → recommendation → adjustment</span>
+        </div>
+        <div class="screen-grid core-grid">
+          <article class="screen-card">
+            <div class="screen-meta"><span>01</span><span>Core</span></div>
+            <h3>Home empty</h3>
+            <img src="../../docs/01-home-empty.svg" alt="RipePick home empty screen" />
+          </article>
+          <article class="screen-card compact-card"><div class="screen-meta"><span>02</span><span>Candidate</span></div><h3>Filled input</h3><img src="../../docs/02-home-filled-candidate.svg" alt="Filled input candidate" /></article>
+          <article class="screen-card compact-card"><div class="screen-meta"><span>03</span><span>Candidate</span></div><h3>Assistant loading</h3><img src="../../docs/03-assistant-loading-candidate.svg" alt="Assistant loading candidate" /></article>
+          <article class="screen-card compact-card"><div class="screen-meta"><span>04</span><span>New</span></div><h3>Clarify one condition</h3><img src="../../docs/04-assistant-clarify.svg" alt="Assistant clarification screen" /></article>
+          <article class="screen-card compact-card"><div class="screen-meta"><span>05</span><span>Candidate</span></div><h3>Recommendation</h3><img src="../../docs/05-recommendation-candidate.svg" alt="Recommendation candidate" /></article>
+          <article class="screen-card compact-card"><div class="screen-meta"><span>06</span><span>Candidate</span></div><h3>Follow-up</h3><img src="../../docs/06-follow-up-candidate.svg" alt="Follow-up candidate" /></article>
+          <article class="screen-card">
+            <div class="screen-meta"><span>02–06</span><span>Core states</span></div>
+            <h3>Input, loading, clarify, result, follow-up</h3>
+            <p>Use the candidate assets together with the new clarification screen to verify the complete recommendation path.</p>
+            <div class="mini-list"><span>02 filled</span><span>03 loading</span><span>04 clarify</span><span>05 result</span><span>06 follow-up</span></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="screen-section" aria-labelledby="supporting-title">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">B · Supporting</p>
+            <h2 id="supporting-title">Explore and verify</h2>
+          </div>
+          <span class="section-note">Secondary entry points</span>
+        </div>
+        <div class="screen-grid raw-grid">
+          <article class="screen-card raw-card"><div class="screen-meta"><span>07 · Candidate</span><span>302 × 702</span></div><h3>Seasonal browse</h3><img src="../../docs/07-seasonal-browse-candidate.svg" alt="Seasonal browse candidate" /></article>
+          <article class="screen-card raw-card"><div class="screen-meta"><span>08 · Candidate</span><span>422 × 792</span></div><h3>Fruit detail</h3><img src="../../docs/08-fruit-detail-candidate.svg" alt="Fruit detail candidate" /></article>
+          <article class="screen-card raw-card"><div class="screen-meta"><span>09 · Candidate</span><span>302 × 702</span></div><h3>No match</h3><img src="../../docs/09-no-match-candidate.svg" alt="No match candidate" /></article>
+          <article class="screen-card raw-card"><div class="screen-meta"><span>10 · Fallback</span><span>390 × 844</span></div><h3>AI unavailable</h3><img src="../../docs/10-ai-unavailable.svg" alt="AI unavailable screen" /></article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

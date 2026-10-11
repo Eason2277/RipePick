@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RipePick · 首页设计方向</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="showcase-header">
+      <div>
+        <p class="kicker">RipePick / Home exploration</p>
+        <h1>描述当前饮食场景</h1>
+        <p class="showcase-intro">五个首页方向，同一个 MVP 任务。先看哪一种让“说出当下情况”变得最自然，再看哪一种最接近原生 iOS 的使用节奏。</p>
+      </div>
+      <div class="reference-note"><span>Design reference</span><strong>quiet, direct, adaptive</strong><small>OpenAI restraint + Apple native interaction principles.</small></div>
+    </header>
+
+    <nav class="variant-tabs" aria-label="首页版本">
+      <button class="variant-tab is-active" type="button" data-variant="calm">01 · Calm chat</button>
+      <button class="variant-tab" type="button" data-variant="canvas">02 · Open canvas</button>
+      <button class="variant-tab" type="button" data-variant="native">03 · Native iOS</button>
+      <button class="variant-tab" type="button" data-variant="context">04 · Context cards</button>
+      <button class="variant-tab" type="button" data-variant="night">05 · Quiet night</button>
+    </nav>
+
+    <main class="showcase-main">
+      <section class="variant-explainer" aria-live="polite">
+        <div><p class="variant-number">01</p><h2 id="variant-title">Calm chat</h2></div>
+        <p id="variant-description">把首页做成一个安静的对话入口，适合用户已经知道自己想问什么的场景。</p>
+      </section>
+
+      <section class="variant-stage" id="variant-stage">
+        <div class="phone-frame variant-calm" data-screen="calm">
+          <div class="phone-status"><span>9:41</span><span>▮▮▮ ◇</span></div>
+          <header class="mobile-header"><div class="brand-dot">r</div><strong>RipePick</strong><button class="round-button" aria-label="打开菜单">···</button></header>
+          <div class="calm-body">
+            <p class="micro-label">YOUR EVERYDAY FRUIT COMPANION</p>
+            <h3>今天想怎么<br />吃？</h3>
+            <p class="supporting-copy">告诉我你此刻的饮食状态，我帮你找到一份刚刚好的水果早餐。</p>
+            <div class="calm-fruit" aria-hidden="true"><span class="fruit-leaf"></span><span class="fruit-seed"></span></div>
+            <div class="input-card">
+              <label for="calm-input">描述一下现在的情况</label>
+              <textarea id="calm-input" data-input rows="3" placeholder="例如：昨晚吃得比较油腻，今天早上吃什么比较好？"></textarea>
+              <div class="input-footer"><div class="tiny-chips"><button type="button" data-fill="昨晚吃得比较油腻，今天早上想吃得清淡一些。">清淡一点</button><button type="button" data-fill="今天想吃一份简单的水果早餐。">水果早餐</button></div><button class="send-button" type="button" data-submit aria-label="开始分析">↑</button></div>
+            </div>
+          </div>
+          <div class="phone-home-indicator"></div>
+        </div>
+
+        <div class="phone-frame variant-canvas is-hidden" data-screen="canvas">
+          <div class="phone-status"><span>9:41</span><span>▮▮▮ ◇</span></div>
+          <header class="mobile-header canvas-header"><button class="round-button" aria-label="打开菜单">☰</button><strong>新问题</strong><button class="round-button" aria-label="更多选项">···</button></header>
+          <div class="canvas-body">
+            <div class="canvas-greeting"><p class="micro-label">RIPEPICK</p><h3>从今天的<br /><em>一口选择</em>开始</h3><p>不需要准备完整的问题。告诉我你现在的状态就好。</p></div>
+            <div class="canvas-composer"><textarea data-input rows="5" placeholder="我现在的饮食状态是..."></textarea><div class="canvas-toolbar"><span>语音输入</span><button class="send-button" data-submit aria-label="提交场景">↑</button></div></div>
+            <p class="section-caption">可以从这里开始</p><div class="canvas-prompts"><button data-fill="昨晚吃得比较油腻，今天早上想吃得清淡一些。"><span>☼</span><strong>清淡一点</strong><small>调整今天的早餐</small></button><button data-fill="今天想找适合早餐的当季水果。"><span>◌</span><strong>当季水果</strong><small>看看今天有什么选择</small></button></div>
+          </div>
+          <div class="phone-home-indicator"></div>
+        </div>
+
+        <div class="phone-frame variant-native is-hidden" data-screen="native">
+          <div class="phone-status"><span>9:41</span><span>▮▮▮ ◇</span></div>
+          <header class="mobile-header native-nav"><button class="round-button" aria-label="打开历史记录">☰</button><div class="native-title"><strong>RipePick</strong><span>新对话</span></div><button class="round-button" aria-label="新建对话">＋</button></header>
+          <div class="native-body"><div class="native-empty"><div class="native-mark">r</div><h3>今天需要一点<br />吃什么的灵感？</h3><p>从你的饮食状态开始，得到一份具体的水果早餐建议。</p></div><div class="native-suggestion"><button data-fill="昨晚吃得比较油腻，今天早上吃什么比较好？"><span>↗</span><div><strong>昨晚吃得比较油腻</strong><small>今天早上怎么搭配？</small></div><i>›</i></button><button data-fill="我想吃得清淡一点，最好有水果。"><span>↗</span><div><strong>今天想吃得清淡一点</strong><small>给我一个简单方案</small></div><i>›</i></button></div></div><div class="native-input"><textarea data-input rows="2" placeholder="描述你现在的情况..."></textarea><button class="send-button" data-submit aria-label="发送">↑</button></div>
+          <div class="phone-home-indicator"></div>
+        </div>
+
+        <div class="phone-frame variant-context is-hidden" data-screen="context">
+          <div class="phone-status"><span>9:41</span><span>▮▮▮ ◇</span></div>
+          <header class="mobile-header"><div class="brand-dot">r</div><strong>今天吃什么</strong><button class="round-button" aria-label="打开菜单">···</button></header>
+          <div class="context-body"><div class="context-title"><p class="micro-label">A SMALL DECISION, MADE CLEAR</p><h3>先告诉我<br />你现在的情况</h3></div><div class="context-stack"><button class="context-card selected" data-fill="昨晚吃得比较油腻，今天早上想吃得清淡一些。"><span class="context-icon">◒</span><div><strong>昨晚吃得比较油腻</strong><small>今天想吃得清淡一些</small></div><b>✓</b></button><button class="context-card" data-fill="今天想吃一份简单的水果早餐。"><span class="context-icon">◌</span><div><strong>想准备水果早餐</strong><small>简单、完整、容易执行</small></div><b>＋</b></button><button class="context-card" data-fill="想找今天适合吃的当季水果。"><span class="context-icon">✦</span><div><strong>看看当季水果</strong><small>按月份和口感来选择</small></div><b>＋</b></button></div><div class="context-or"><span>或者直接说说看</span></div><div class="context-input"><textarea data-input rows="2" placeholder="例如：今天胃口不太好..."></textarea><button class="send-button" data-submit aria-label="开始分析">↑</button></div></div>
+          <div class="phone-home-indicator"></div>
+        </div>
+
+        <div class="phone-frame variant-night is-hidden" data-screen="night">
+          <div class="phone-status"><span>9:41</span><span>▮▮▮ ◇</span></div>
+          <header class="mobile-header"><div class="brand-dot">r</div><strong>RipePick</strong><button class="round-button" aria-label="打开菜单">···</button></header>
+          <div class="night-body"><div class="night-orbit" aria-hidden="true"><span></span><i></i></div><div class="night-copy"><p class="micro-label">A QUIET MOMENT TO CHOOSE</p><h3>你的早餐，<br /><em>从哪里开始？</em></h3><p>把现在的感受告诉我。我会帮你缩小选择。</p></div><div class="night-input"><textarea data-input rows="4" placeholder="昨晚吃得比较油腻..."></textarea><div class="night-input-footer"><span>⌘ ↵</span><button class="send-button" data-submit aria-label="开始分析">↑</button></div></div><div class="night-suggestion"><button data-fill="我今天想吃得清淡一点">清淡一点</button><button data-fill="今天有什么当季水果？">当季水果</button></div></div>
+          <div class="phone-home-indicator"></div>
+        </div>
+      </section>
+
+      <section class="comparison-strip">
+        <div><span class="comparison-label">Interaction test</span><strong id="interaction-status">点击任意快捷选项，再点击箭头，查看输入状态。</strong></div>
+        <span class="keyboard-hint">Mobile-first · 390 × 844</span>
+      </section>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>

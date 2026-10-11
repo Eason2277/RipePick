@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="980" viewBox="0 0 1600 980">
+  <rect width="1600" height="980" fill="#f5f8f3"/>
+  <text x="92" y="86" fill="#173f34" font-family="Arial, sans-serif" font-size="42" font-weight="700">RipePick MVP · 页面关系总览</text>
+  <text x="94" y="128" fill="#62736b" font-family="Arial, sans-serif" font-size="20">核心目标：帮助用户完成一次具体的水果早餐决策</text>
+
+  <rect x="76" y="176" width="1448" height="366" rx="28" fill="#ffffff" stroke="#c8d9ce" stroke-width="2"/>
+  <text x="112" y="226" fill="#2f765c" font-family="Arial, sans-serif" font-size="22" font-weight="700">核心 MVP 路径 · 用户应该先看到这里</text>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="112" y="278" width="286" height="184" rx="20" fill="#edf5ee" stroke="#a9c9b5" stroke-width="2"/>
+    <text x="140" y="320" fill="#2f765c" font-size="18" font-weight="700">01 · Home</text>
+    <text x="140" y="364" fill="#173f34" font-size="28" font-weight="700">描述当前场景</text>
+    <text x="140" y="404" fill="#62736b" font-size="18">饮食状态 + 时间 + 目标</text>
+    <rect x="140" y="424" width="164" height="8" rx="4" fill="#2f765c"/>
+
+    <rect x="460" y="278" width="286" height="184" rx="20" fill="#edf5ee" stroke="#a9c9b5" stroke-width="2"/>
+    <text x="488" y="320" fill="#2f765c" font-size="18" font-weight="700">02 · Assistant</text>
+    <text x="488" y="364" fill="#173f34" font-size="28" font-weight="700">理解并澄清</text>
+    <text x="488" y="404" fill="#62736b" font-size="18">分析中 · 必要时追问一个条件</text>
+    <rect x="488" y="424" width="210" height="8" rx="4" fill="#a9c9b5"/>
+
+    <rect x="808" y="278" width="286" height="184" rx="20" fill="#e2f0e7" stroke="#5b9a7a" stroke-width="3"/>
+    <text x="836" y="320" fill="#2f765c" font-size="18" font-weight="700">03 · Recommendation</text>
+    <text x="836" y="364" fill="#173f34" font-size="28" font-weight="700">水果 + 早餐建议</text>
+    <text x="836" y="404" fill="#62736b" font-size="18">理由、份量、提醒、替代方案</text>
+    <rect x="836" y="424" width="232" height="8" rx="4" fill="#2f765c"/>
+
+    <rect x="1156" y="278" width="286" height="184" rx="20" fill="#edf5ee" stroke="#a9c9b5" stroke-width="2"/>
+    <text x="1184" y="320" fill="#2f765c" font-size="18" font-weight="700">04 · Follow-up</text>
+    <text x="1184" y="364" fill="#173f34" font-size="28" font-weight="700">继续调整</text>
+    <text x="1184" y="404" fill="#62736b" font-size="18">口味、替代水果或早餐</text>
+    <rect x="1184" y="424" width="196" height="8" rx="4" fill="#a9c9b5"/>
+  </g>
+
+  <g stroke="#2f765c" stroke-width="4" fill="none" stroke-linecap="round">
+    <path d="M398 370 H460"/>
+    <path d="M746 370 H808"/>
+    <path d="M1094 370 H1156"/>
+  </g>
+  <g fill="#2f765c">
+    <path d="M450 360 l12 10 -12 10z"/>
+    <path d="M798 360 l12 10 -12 10z"/>
+    <path d="M1146 360 l12 10 -12 10z"/>
+  </g>
+
+  <rect x="76" y="590" width="1448" height="314" rx="28" fill="#ffffff" stroke="#d6e0da" stroke-width="2"/>
+  <text x="112" y="640" fill="#62736b" font-family="Arial, sans-serif" font-size="22" font-weight="700">支撑与降级页面 · 需要时进入，不抢主流程注意力</text>
+
+  <g font-family="Arial, sans-serif">
+    <rect x="112" y="690" width="300" height="142" rx="18" fill="#f7faf7" stroke="#c8d9ce" stroke-width="2"/>
+    <text x="140" y="730" fill="#2f765c" font-size="18" font-weight="700">Supporting · Browse</text>
+    <text x="140" y="770" fill="#173f34" font-size="24" font-weight="700">浏览当季水果</text>
+    <text x="140" y="804" fill="#62736b" font-size="16">月份 / 搜索 / 水果卡片 / 过滤</text>
+
+    <rect x="462" y="690" width="300" height="142" rx="18" fill="#f7faf7" stroke="#c8d9ce" stroke-width="2"/>
+    <text x="490" y="730" fill="#2f765c" font-size="18" font-weight="700">Supporting · Detail</text>
+    <text x="490" y="770" fill="#173f34" font-size="24" font-weight="700">查看水果详情</text>
+    <text x="490" y="804" fill="#62736b" font-size="16">季节 / 口味 / 营养 / 搭配依据</text>
+
+    <rect x="812" y="690" width="300" height="142" rx="18" fill="#f7faf7" stroke="#c8d9ce" stroke-width="2"/>
+    <text x="840" y="730" fill="#2f765c" font-size="18" font-weight="700">Fallback · Clarify</text>
+    <text x="840" y="770" fill="#173f34" font-size="24" font-weight="700">信息不足</text>
+    <text x="840" y="804" fill="#62736b" font-size="16">只追问影响推荐的必要条件</text>
+
+    <rect x="1162" y="690" width="300" height="142" rx="18" fill="#fff8e7" stroke="#e4c978" stroke-width="2"/>
+    <text x="1190" y="730" fill="#9a6b22" font-size="18" font-weight="700">Fallback · Service</text>
+    <text x="1190" y="770" fill="#684b1c" font-size="24" font-weight="700">AI 服务不可用</text>
+    <text x="1190" y="804" fill="#806d4a" font-size="16">保留浏览和水果详情入口</text>
+  </g>
+
+  <g stroke="#9eb6a7" stroke-width="3" stroke-dasharray="9 10" fill="none">
+    <path d="M950 462 V560 H262 V690"/>
+    <path d="M950 462 V560 H612 V690"/>
+    <path d="M612 462 V560 H962 V690"/>
+    <path d="M808 462 V560 H1312 V690"/>
+  </g>
+  <text x="112" y="864" fill="#8a9991" font-family="Arial, sans-serif" font-size="16">实线 = 核心用户路径　　虚线 = 支撑、澄清或降级分支</text>
+</svg>

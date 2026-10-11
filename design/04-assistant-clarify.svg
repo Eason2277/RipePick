@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="390" height="844" viewBox="0 0 390 844">
+  <rect width="390" height="844" rx="28" fill="#F7F9F5"/>
+  <rect x="1" y="1" width="388" height="842" rx="27" fill="none" stroke="#C8D9CE" stroke-width="2"/>
+  <rect x="20" y="20" width="350" height="64" rx="22" fill="#EFF5EC"/>
+  <text x="42" y="59" fill="#173F35" font-family="Arial, sans-serif" font-size="20" font-weight="700">RipePick</text>
+  <text x="42" y="116" fill="#2F765C" font-family="Arial, sans-serif" font-size="13" font-weight="700">02 · ASSISTANT</text>
+  <text x="42" y="154" fill="#173F35" font-family="Arial, sans-serif" font-size="28" font-weight="700">再确认一个条件</text>
+  <text x="42" y="188" fill="#718078" font-family="Arial, sans-serif" font-size="16">这样推荐会更贴近你今天的早餐。</text>
+  <rect x="42" y="232" width="306" height="142" rx="20" fill="#FFFFFF" stroke="#D8E4DB" stroke-width="2"/>
+  <text x="64" y="268" fill="#2F765C" font-family="Arial, sans-serif" font-size="14" font-weight="700">我已经理解</text>
+  <text x="64" y="307" fill="#173F35" font-family="Arial, sans-serif" font-size="19">昨晚吃得比较油腻，</text>
+  <text x="64" y="336" fill="#173F35" font-family="Arial, sans-serif" font-size="19">今天早上想吃得清淡些。</text>
+  <rect x="42" y="410" width="306" height="166" rx="20" fill="#FFF7E7" stroke="#E4C978" stroke-width="2"/>
+  <text x="64" y="450" fill="#9A6B22" font-family="Arial, sans-serif" font-size="14" font-weight="700">需要确认</text>
+  <text x="64" y="491" fill="#684B1C" font-family="Arial, sans-serif" font-size="19">你早餐方便搭配乳制品吗？</text>
+  <text x="64" y="524" fill="#806D4A" font-family="Arial, sans-serif" font-size="15">这会影响早餐搭配，不影响水果候选。</text>
+  <rect x="42" y="612" width="146" height="52" rx="18" fill="#2F765C"/>
+  <text x="89" y="645" fill="#FFFFFF" font-family="Arial, sans-serif" font-size="17" font-weight="700">可以</text>
+  <rect x="202" y="612" width="146" height="52" rx="18" fill="#FFFFFF" stroke="#A9C9B5" stroke-width="2"/>
+  <text x="239" y="645" fill="#2F765C" font-family="Arial, sans-serif" font-size="17" font-weight="700">不太方便</text>
+  <text x="42" y="756" fill="#718078" font-family="Arial, sans-serif" font-size="14">也可以直接输入你的实际情况。</text>
+  <rect x="42" y="774" width="306" height="42" rx="21" fill="#FFFFFF" stroke="#D8E4DB" stroke-width="2"/>
+  <text x="62" y="801" fill="#A1ADA5" font-family="Arial, sans-serif" font-size="14">输入补充信息...</text>
+</svg>

@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="980" viewBox="0 0 1500 980">
+  <style>
+    .sans{font-family:Arial,'PingFang SC','Microsoft YaHei',sans-serif}.ink{fill:#183B32}.muted{fill:#687A71}.green{fill:#2F765C}.line{stroke:#DCE6DF}.small{font-size:12px}.body{font-size:14px}.title{font-size:26px;font-weight:700}.sub{font-size:13px}.bold{font-weight:700}
+  </style>
+  <g id="ripepick-organized-prototype">
+  <g transform="translate(60 56)">
+    <text class="sans ink bold" font-size="20">RipePick · MVP UI flow</text>
+    <text class="sans muted" y="28" font-size="13">以真实饮食场景为入口，帮助用户完成一次具体的水果早餐决策</text>
+  </g>
+
+  <!-- flow connectors sit between screens so the page order reads at a glance -->
+  <g class="sans" fill="none" stroke="#2F765C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M480 520 H525"/><path d="M512 508 L530 520 L512 532"/>
+    <path d="M960 520 H1005"/><path d="M992 508 L1010 520 L992 532"/>
+  </g>
+  <g class="sans" text-anchor="middle">
+    <rect x="478" y="477" width="66" height="24" rx="12" fill="#EAF3E8"/>
+    <text class="green bold" x="511" y="494" font-size="11">提交场景</text>
+    <rect x="958" y="477" width="72" height="24" rx="12" fill="#EAF3E8"/>
+    <text class="green bold" x="994" y="494" font-size="11">继续调整</text>
+  </g>
+
+  <!-- Home -->
+  <g transform="translate(60 130)">
+    <rect x="0" y="-34" width="66" height="24" rx="12" fill="#183B32"/><text class="sans" x="33" y="-18" fill="#FFFFFF" font-size="11" text-anchor="middle" font-weight="700">01 首页</text>
+    <rect width="420" height="780" rx="20" fill="#F7F9F5" stroke="#D7E2DA" stroke-width="2"/>
+    <rect x="1" y="1" width="418" height="68" rx="20" fill="#FFFFFF"/>
+    <text class="sans ink bold" x="28" y="32" font-size="18">RipePick</text><text class="sans muted" x="28" y="51" font-size="11">水果为核心的饮食决策助手</text>
+    <circle cx="374" cy="34" r="18" fill="#F5C85B"/><circle cx="368" cy="30" r="2.5" fill="#183B32"/><circle cx="380" cy="30" r="2.5" fill="#183B32"/><path d="M368 39 Q374 44 380 39" fill="none" stroke="#183B32" stroke-width="2" stroke-linecap="round"/>
+    <text class="sans ink title" x="28" y="134">今天想怎么吃？</text>
+    <text class="sans muted sub" x="28" y="163">描述你现在的饮食状态，先从一件事开始</text>
+    <rect x="28" y="190" width="364" height="150" rx="14" fill="#FFFFFF" stroke="#C9D9CF" stroke-width="2"/>
+    <text class="sans ink body" x="46" y="226">昨晚吃得比较油腻，今天早上</text><text class="sans ink body" x="46" y="249">我想吃得清淡一些，吃什么比较好？</text>
+    <rect x="46" y="281" width="88" height="28" rx="14" fill="#EAF3E8"/><text class="sans green small" x="61" y="300">清淡一点</text>
+    <rect x="144" y="281" width="88" height="28" rx="14" fill="#EAF3E8"/><text class="sans green small" x="159" y="300">早餐搭配</text>
+    <rect x="242" y="281" width="92" height="28" rx="14" fill="#EAF3E8"/><text class="sans green small" x="258" y="300">少量推荐</text>
+    <rect x="28" y="365" width="364" height="50" rx="25" fill="#2F765C"/><text class="sans" x="168" y="396" fill="#FFFFFF" font-size="15" font-weight="700">获得建议  →</text>
+    <text class="sans ink bold" x="28" y="480" font-size="14">也可以这样问</text>
+    <rect x="28" y="500" width="364" height="44" rx="22" fill="#FFFFFF" stroke="#D7E2DA"/><text class="sans green body" x="48" y="528">七月有什么当季水果？</text><text class="sans muted" x="362" y="528">›</text>
+    <rect x="28" y="556" width="364" height="44" rx="22" fill="#FFFFFF" stroke="#D7E2DA"/><text class="sans green body" x="48" y="584">有没有酸酸甜甜、适合早餐的？</text><text class="sans muted" x="362" y="584">›</text>
+    <rect x="28" y="612" width="364" height="44" rx="22" fill="#FFFFFF" stroke="#D7E2DA"/><text class="sans green body" x="48" y="640">怎么挑和保存西瓜？</text><text class="sans muted" x="362" y="640">›</text>
+    <line x1="28" y1="711" x2="392" y2="711" stroke="#DCE6DF"/><text class="sans muted" x="28" y="740" font-size="11">一般性健康饮食信息，不替代医生或营养师建议</text>
+  </g>
+
+  <!-- Recommendation -->
+  <g transform="translate(540 130)">
+    <rect x="0" y="-34" width="88" height="24" rx="12" fill="#2F765C"/><text class="sans" x="44" y="-18" fill="#FFFFFF" font-size="11" text-anchor="middle" font-weight="700">02 推荐结果</text>
+    <rect width="420" height="780" rx="20" fill="#F7F9F5" stroke="#D7E2DA" stroke-width="2"/>
+    <rect x="1" y="1" width="418" height="68" rx="20" fill="#FFFFFF"/><text class="sans ink bold" x="28" y="39" font-size="17">‹  早餐建议</text><text class="sans muted" x="338" y="39" font-size="12">重新开始</text>
+    <rect x="28" y="94" width="364" height="45" rx="12" fill="#EAF3E8"/><text class="sans green small" x="46" y="122">已理解：今天早上 · 想清淡一些 · 昨晚饮食偏油腻</text>
+    <text class="sans ink title" x="28" y="188">一份简单的早餐方案</text>
+    <rect x="28" y="215" width="364" height="230" rx="16" fill="#FFFFFF" stroke="#D7E2DA"/>
+    <circle cx="102" cy="305" r="58" fill="#F6C95D"/><path d="M67 310 Q102 257 137 310 Q102 355 67 310Z" fill="#F29A59"/><path d="M102 247 Q100 231 118 226" fill="none" stroke="#34755B" stroke-width="6" stroke-linecap="round"/>
+    <text class="sans green bold" x="178" y="260" font-size="12">主推荐 · 结构化数据匹配</text><text class="sans ink bold" x="178" y="294" font-size="25">木瓜</text><text class="sans muted sub" x="178" y="320">Papaya · 约 150g</text><text class="sans ink body" x="178" y="354">无糖酸奶 + 全麦吐司</text><text class="sans muted small" x="178" y="380">组成一顿完整、简单的早餐</text>
+    <text class="sans ink bold" x="28" y="490" font-size="14">为什么这样建议</text><text class="sans muted body" x="28" y="518">口感柔和，搭配酸奶和全麦吐司，</text><text class="sans muted body" x="28" y="541">比只吃水果更接近一顿完整早餐。</text>
+    <rect x="28" y="565" width="364" height="64" rx="12" fill="#FFF7E6"/><text class="sans" x="46" y="591" fill="#8B652B" font-size="12" font-weight="700">份量与提醒</text><text class="sans" x="46" y="614" fill="#8B652B" font-size="12">木瓜约 150g；如有过敏或饮食限制，请按个人情况调整。</text>
+    <rect x="28" y="652" width="174" height="46" rx="23" fill="#2F765C"/><text class="sans" x="67" y="681" fill="#FFFFFF" font-size="13" font-weight="700">查看替代方案</text>
+    <rect x="218" y="652" width="174" height="46" rx="23" fill="#EAF3E8"/><text class="sans green" x="260" y="681" font-size="13" font-weight="700">继续追问</text>
+    <text class="sans muted" x="28" y="744" font-size="10">依据：水果季节 / 口味 / 早餐搭配数据 · 数据更新时间：待接入</text>
+  </g>
+
+  <!-- Chat + fallback states -->
+  <g transform="translate(1020 130)">
+    <rect x="0" y="-34" width="88" height="24" rx="12" fill="#6EAA82"/><text class="sans" x="44" y="-18" fill="#FFFFFF" font-size="11" text-anchor="middle" font-weight="700">03 继续对话</text>
+    <rect width="420" height="780" rx="20" fill="#F7F9F5" stroke="#D7E2DA" stroke-width="2"/>
+    <rect x="1" y="1" width="418" height="68" rx="20" fill="#FFFFFF"/><text class="sans ink bold" x="28" y="39" font-size="17">‹  和 RipePick 继续聊</text>
+    <rect x="28" y="94" width="280" height="66" rx="16" fill="#EAF3E8"/><text class="sans green body" x="46" y="121">如果不想吃木瓜，</text><text class="sans green body" x="46" y="144">还有别的选择吗？</text>
+    <rect x="56" y="190" width="336" height="214" rx="16" fill="#FFFFFF" stroke="#D7E2DA"/><text class="sans green bold" x="76" y="221" font-size="12">RipePick · 替代方案</text><text class="sans ink body" x="76" y="253">可以换成：香蕉半根 + 无糖酸奶。</text><text class="sans muted body" x="76" y="286">如果没有酸奶，也可以告诉我，</text><text class="sans muted body" x="76" y="309">我会在已知数据范围内重新调整。</text><line x1="76" y1="335" x2="372" y2="335" stroke="#DCE6DF"/><text class="sans muted small" x="76" y="363">这是一般性饮食建议，不代表治疗效果。</text>
+    <text class="sans muted small" x="28" y="455">遇到信息不足时，只追问必要条件</text><rect x="28" y="475" width="364" height="44" rx="22" fill="#FFFFFF" stroke="#D7E2DA"/><text class="sans green body" x="48" y="503">你对乳制品有不耐受吗？</text>
+    <text class="sans muted small" x="28" y="563">AI 或数据服务不可用时</text><rect x="28" y="582" width="364" height="70" rx="12" fill="#FFF7E6"/><text class="sans" x="46" y="611" fill="#8B652B" font-size="12" font-weight="700">暂时无法生成个性化建议</text><text class="sans" x="46" y="634" fill="#8B652B" font-size="12">你可以先浏览当季水果，或稍后再试。</text>
+    <rect x="28" y="695" width="364" height="48" rx="24" fill="#FFFFFF" stroke="#C9D9CF"/><text class="sans muted body" x="48" y="725">输入新的饮食情况…</text><circle cx="366" cy="719" r="16" fill="#2F765C"/><text class="sans" x="361" y="725" fill="#FFFFFF" font-size="15">↑</text>
+  </g>
+  </g>
+</svg>

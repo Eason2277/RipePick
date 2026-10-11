@@ -1,0 +1,36 @@
+# Dependencies
+node_modules/
+vendor/
+
+# Secrets & Environment
+.env
+*.env.local
+*.env.production
+
+# Build output
+backend/bin/
+backend/tmp/
+frontend/dist/
+frontend/build/
+
+# IDE
+.idea/
+.vscode/
+.codex/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Go
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Database
+*.db
+*.sqlite
