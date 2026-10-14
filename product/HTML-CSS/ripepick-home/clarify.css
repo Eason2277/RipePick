@@ -1,0 +1,21 @@
+.clarify-screen { padding: 0 22px 34px; }
+.clarify-body { padding-top: 32px; }
+.clarify-body h1 { margin-top: 12px; font-size: 28px; letter-spacing: -1px; }
+.flow-subtitle { margin-top: 9px; color: var(--muted); font-size: 13px; line-height: 1.6; }
+.context-summary { margin-top: 36px; padding: 17px; border-radius: 14px; background: #fffaf2; }
+.context-summary h2, .choice-group legend { font-size: 13px; font-weight: 750; }
+.context-summary p { margin-top: 9px; color: var(--muted); font-size: 13px; line-height: 1.65; }
+.choice-group { min-width: 0; margin: 27px 0 0; padding: 0; border: 0; }
+.choice-group legend { padding: 0; }
+.choice-group > p { margin-top: 7px; color: var(--muted); font-size: 11px; line-height: 1.5; }
+.choice-card { min-height: 52px; display: flex; align-items: center; gap: 11px; margin-top: 11px; padding: 0 15px; border: 1px solid var(--line); border-radius: 12px; background: #fffaf2; font-size: 13px; }
+.choice-card:has(input:checked) { border-color: var(--accent); background: #f4e9e5; }
+.choice-card input { width: 17px; height: 17px; margin: 0; accent-color: var(--accent); }
+.optional-note { display: block; margin-top: 24px; font-size: 12px; font-weight: 700; }
+#extra-context { width: 100%; min-height: 72px; margin-top: 10px; padding: 12px; border: 1px solid var(--line); border-radius: 12px; resize: vertical; background: #fffaf2; color: var(--ink); font-size: 13px; line-height: 1.55; }
+#extra-context::placeholder { color: #a79b98; }
+.field-hint { margin-top: 7px; color: var(--muted); font-size: 10px; line-height: 1.5; }
+
+@media (max-width: 360px) {
+  .clarify-screen { padding-right: 17px; padding-left: 17px; }
+}

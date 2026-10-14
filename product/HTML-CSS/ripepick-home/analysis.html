@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#f5f1e9" />
+    <title>RipePick · 正在理解你的场景</title>
+    <link rel="stylesheet" href="./shared.css" />
+    <link rel="stylesheet" href="./analysis.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="screen analysis-screen" aria-labelledby="analysis-title">
+        <header class="analysis-header">
+          <a class="back-link" href="./index.html" aria-label="返回 RipePick 首页">RipePick</a>
+        </header>
+        <div class="analysis-body">
+          <div class="analysis-art" aria-hidden="true"><span></span><i></i></div>
+          <p class="eyebrow">UNDERSTANDING YOUR CONTEXT</p>
+          <h1 id="analysis-title" tabindex="-1">正在理解你的场景</h1>
+          <p>先弄清此刻的状态，再寻找合适的水果与早餐搭配。</p>
+          <div class="progress" role="progressbar" aria-label="正在理解你的场景" aria-valuemin="0" aria-valuemax="100" aria-valuenow="64"><span></span></div>
+          <section class="recognized" aria-labelledby="recognized-title">
+            <h2 id="recognized-title">已识别</h2>
+            <dl>
+              <div><dt>时间</dt><dd id="recognized-time">待确认</dd></div>
+              <div><dt>目标</dt><dd id="recognized-goal">待确认</dd></div>
+              <div><dt>背景</dt><dd id="recognized-context">待确认</dd></div>
+            </dl>
+          </section>
+          <blockquote id="submitted-prompt"></blockquote>
+          <aside class="privacy-note">我们只使用完成这次建议所需的信息，不建立长期健康档案。</aside>
+          <a class="primary-action continue-link" href="./clarify.html">继续</a>
+        </div>
+      </section>
+    </main>
+    <script src="./analysis.js"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+.recommendation-screen { padding: 0 22px 34px; }
+.result-header { justify-content: space-between; }
+.result-header .back-link { font-size: 15px; }
+.text-button { padding: 6px 0; color: var(--accent); font-size: 11px; text-decoration: none; }
+.result-body { padding-top: 22px; }
+.result-context { margin-bottom: 22px; color: var(--muted); font-size: 11px; line-height: 1.5; }
+.result-body > h1 { margin: 7px 0 17px; font-size: 24px; }
+.recommendation-card { display: grid; grid-template-columns: 104px minmax(0, 1fr); align-items: center; gap: 15px; padding: 16px; border: 1px solid var(--line); border-radius: 16px; background: #fffaf2; }
+.fruit-art { position: relative; width: 96px; height: 108px; display: grid; place-items: center; overflow: hidden; border-radius: 48px; background: #f4e7c9; }
+.fruit-art::before { width: 55px; height: 78px; border-radius: 52% 48% 48% 52%; background: #f6c95d; content: ""; transform: rotate(18deg); }
+.fruit-art span { position: absolute; width: 20px; height: 46px; border: 5px solid #f29a59; border-radius: 50%; transform: rotate(18deg); }
+.fruit-art::after { position: absolute; top: 10px; left: 52px; width: 8px; height: 20px; border-radius: 8px; background: #657c45; content: ""; transform: rotate(28deg); }
+.recommendation-card h2 { font-size: 25px; letter-spacing: -.6px; }
+.fruit-english { margin-top: 4px; color: var(--muted); font-size: 10px; }
+.pairing { margin-top: 14px; font-size: 12px; font-weight: 750; line-height: 1.5; }
+.pairing-caption { margin-top: 4px; color: var(--muted); font-size: 10px; line-height: 1.5; }
+.result-section { margin-top: 21px; }
+.result-section h2, .alternative-card h2 { font-size: 13px; font-weight: 750; }
+.result-section p, .alternative-card p { margin-top: 8px; color: var(--muted); font-size: 12px; line-height: 1.65; }
+.portion-section { padding: 15px; border-radius: 12px; background: var(--soft); }
+.alternative-card { margin-top: 15px; padding: 15px; border: 1px solid var(--line); border-radius: 12px; background: #fffaf2; }
+.data-disclaimer { margin-top: 18px; color: var(--accent); font-size: 10px; line-height: 1.6; }
+.data-source { margin-top: 7px; color: var(--muted); font-size: 9px; line-height: 1.5; }
+.edit-link { display: grid; place-items: center; margin-top: 17px; color: var(--accent); text-decoration: none; }
+
+@media (max-width: 360px) {
+  .recommendation-screen { padding-right: 17px; padding-left: 17px; }
+  .recommendation-card { grid-template-columns: 84px minmax(0, 1fr); gap: 12px; padding: 12px; }
+  .fruit-art { width: 80px; height: 96px; }
+}

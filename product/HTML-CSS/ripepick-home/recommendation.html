@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#f5f1e9" />
+    <title>RipePick · 今日早餐建议</title>
+    <link rel="stylesheet" href="./shared.css" />
+    <link rel="stylesheet" href="./recommendation.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="screen recommendation-screen" aria-labelledby="recommendation-title">
+        <header class="analysis-header result-header">
+          <a class="back-link" href="./clarify.html">今日早餐建议</a>
+          <a class="text-button" id="new-prompt" href="./index.html">新问题</a>
+        </header>
+        <div class="result-body">
+          <p class="result-context" id="result-context"></p>
+          <p class="eyebrow">主推荐 · 候选演示</p>
+          <h1 id="recommendation-title" tabindex="-1">一份简单的早餐方案</h1>
+
+          <article class="recommendation-card" aria-label="候选水果早餐方案">
+            <div class="fruit-art" aria-hidden="true"><span></span></div>
+            <div>
+              <h2>木瓜</h2>
+              <p class="fruit-english">Papaya · 约 150g</p>
+              <p class="pairing" id="pairing-text"></p>
+              <p class="pairing-caption" id="pairing-caption"></p>
+            </div>
+          </article>
+
+          <section class="result-section">
+            <h2>为什么这样建议</h2>
+            <p id="rationale-text"></p>
+          </section>
+          <section class="result-section portion-section">
+            <h2>份量与注意事项</h2>
+            <p>候选原型份量为木瓜约 150g；过敏或饮食限制请按个人情况调整。</p>
+          </section>
+          <section class="alternative-card">
+            <h2>替代方案</h2>
+            <p id="alternative-text"></p>
+          </section>
+
+          <p class="data-disclaimer" id="data-disclaimer"></p>
+          <p class="data-source">候选依据字段：口味 / 早餐搭配 / 份量 · 数据更新时间：待接入</p>
+          <a class="secondary-action edit-link" href="./clarify.html">调整早餐条件</a>
+        </div>
+      </section>
+    </main>
+    <script src="./recommendation.js"></script>
+  </body>
+</html>

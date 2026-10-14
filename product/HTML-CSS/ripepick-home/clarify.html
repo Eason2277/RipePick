@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#f5f1e9" />
+    <title>RipePick · 再确认一个条件</title>
+    <link rel="stylesheet" href="./shared.css" />
+    <link rel="stylesheet" href="./clarify.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="screen clarify-screen" aria-labelledby="clarify-title">
+        <header class="analysis-header">
+          <a class="back-link" href="./analysis.html">RipePick</a>
+        </header>
+        <div class="clarify-body">
+          <p class="eyebrow">02 · ASSISTANT</p>
+          <h1 id="clarify-title" tabindex="-1">再确认一个条件</h1>
+          <p class="flow-subtitle">这样推荐会更贴近你今天的早餐。</p>
+
+          <section class="context-summary" aria-labelledby="summary-title">
+            <h2 id="summary-title">我已经理解</h2>
+            <p id="clarify-prompt"></p>
+          </section>
+
+          <form id="clarify-form">
+            <fieldset class="choice-group">
+              <legend>你早餐方便搭配乳制品吗？</legend>
+              <p>这会影响早餐搭配，不影响水果候选。</p>
+              <label class="choice-card">
+                <input type="radio" name="dairy" value="available" checked />
+                <span>可以</span>
+              </label>
+              <label class="choice-card">
+                <input type="radio" name="dairy" value="unavailable" />
+                <span>不太方便</span>
+              </label>
+            </fieldset>
+            <label class="optional-note" for="extra-context">也可以直接输入你的实际情况</label>
+            <textarea id="extra-context" name="extra-context" rows="2" maxlength="240" placeholder="输入补充信息..." aria-describedby="extra-hint"></textarea>
+            <p class="field-hint" id="extra-hint">例如：我对乳制品不耐受。仅用于这次原型演示。</p>
+            <button class="primary-action" type="submit">查看早餐建议</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script src="./clarify.js"></script>
+  </body>
+</html>
