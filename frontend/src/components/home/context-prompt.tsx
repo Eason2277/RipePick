@@ -56,7 +56,6 @@ export function ContextPrompt({ onSubmit }: Props) {
             />
 
             <View style={styles.divider}/>
-
             <View style={styles.actions}>
                 <ScrollView
                     horizontal
@@ -108,21 +107,7 @@ export function ContextPrompt({ onSubmit }: Props) {
 
         </View>
 
-
-
-
-
-
-
-
     )
-
-
-
-
-
-
-
 
 }
 

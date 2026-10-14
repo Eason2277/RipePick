@@ -10,7 +10,7 @@ The project is currently in its MVP stage. It provides general healthy-eating gu
 RipePick/
 ├── frontend/   # Expo and React Native application
 ├── backend/    # Go and Gin API
-├── design/     # Product flows, prototypes, and design artifacts
+├── product/    # Product flows, prototypes, and design artifacts
 ├── PRODUCT.md
 └── MVP_BRIEF.md
 ```
@@ -54,4 +54,4 @@ go vet ./...
 
 ## Product scope
 
-See [MVP_BRIEF.md](MVP_BRIEF.md) for the current implementation boundary and [PRODUCT.md](PRODUCT.md) for the longer-term product direction.
+See [MVP_BRIEF.md](product/MVP_BRIEF.md) for the current implementation boundary and [PRODUCT.md](product/PRODUCT.md) for the longer-term product direction. Product prototypes and their inventory are in [`product/`](product/).

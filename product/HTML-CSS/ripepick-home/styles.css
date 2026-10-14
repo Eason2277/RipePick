@@ -1,31 +1,5 @@
-:root {
-  color-scheme: light;
-  --canvas: #e6e1d9;
-  --paper: #f5f1e9;
-  --ink: #382125;
-  --accent: #722e3d;
-  --muted: #7c706e;
-  --soft: #ebe5db;
-  --olive: #dce1bb;
-  --line: #ddd4c8;
-  --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "PingFang SC", "Helvetica Neue", sans-serif;
-  font-family: var(--font);
-  color: var(--ink);
-  background: var(--canvas);
-}
+@import url("./shared.css");
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-body { margin: 0; min-width: 320px; }
-button, textarea { font: inherit; }
-button { border: 0; color: inherit; cursor: pointer; }
-button, a { -webkit-tap-highlight-color: transparent; }
-button:focus-visible, textarea:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-[hidden] { display: none !important; }
-.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
-
-.app-shell { width: min(100%, 430px); min-height: 100svh; margin: 0 auto; background: var(--paper); }
-.screen { min-height: 100svh; }
 .home-screen { position: relative; padding: 0 22px 102px; }
 .app-header { height: 104px; display: flex; align-items: center; justify-content: space-between; }
 .brand-lockup { display: flex; align-items: center; gap: 11px; color: inherit; text-decoration: none; }
@@ -36,8 +10,6 @@ button:focus-visible, textarea:focus-visible, a:focus-visible { outline: 2px sol
 .more-button { width: 42px; height: 42px; border-radius: 50%; background: var(--olive); font-size: 14px; letter-spacing: 2px; }
 
 .intro { margin-top: 18px; }
-.eyebrow { margin: 0; color: var(--accent); font-size: 9px; font-weight: 800; letter-spacing: 1.25px; }
-h1, h2, p { margin: 0; }
 .intro h1 { margin-top: 9px; font-size: 39px; line-height: 1.12; font-weight: 850; letter-spacing: -1.8px; }
 .intro-copy { margin-top: 12px; color: var(--muted); font-size: 14px; line-height: 1.6; }
 
@@ -77,34 +49,8 @@ h1, h2, p { margin: 0; }
 .tab-item.active { color: var(--accent); }
 .tab-disc { width: 17px; border-radius: 50%; background: currentColor; opacity: .75; }
 
-.analysis-screen { padding: 0 22px 34px; }
-.analysis-header { height: 72px; display: flex; align-items: center; border-bottom: 1px solid var(--line); }
-.analysis-header button { min-height: 44px; padding: 0; background: transparent; font-size: 26px; }
-.analysis-header button span { vertical-align: 3px; font-size: 16px; font-weight: 800; }
-.analysis-body { padding-top: 55px; text-align: center; }
-.analysis-art { position: relative; width: 114px; height: 114px; margin: 0 auto 30px; overflow: hidden; border-radius: 50%; background: var(--olive); }
-.analysis-art span { position: absolute; left: 21px; right: 21px; bottom: 22px; height: 42px; border-radius: 50% 50% 44% 44%; background: var(--accent); }
-.analysis-art i { position: absolute; top: 17px; left: 56px; width: 7px; height: 31px; transform: rotate(12deg); border-radius: 5px; background: var(--ink); }
-.analysis-body h1 { margin-top: 10px; font-size: 27px; letter-spacing: -1px; }
-.analysis-body > p:not(.eyebrow):not(.prototype-note) { margin-top: 10px; color: var(--muted); font-size: 13px; line-height: 1.6; }
-.progress { height: 9px; margin: 42px 18px 23px; overflow: hidden; border-radius: 10px; background: var(--soft); }
-.progress span { display: block; width: 64%; height: 100%; border-radius: inherit; background: var(--accent); }
-.recognized { margin: 0 18px; text-align: left; }
-.recognized h2 { color: var(--accent); font-size: 12px; }
-.recognized dl { margin: 13px 0 0; }
-.recognized dl div { display: grid; grid-template-columns: 48px 1fr; padding: 6px 0; font-size: 13px; }
-.recognized dt { color: var(--muted); }
-.recognized dd { margin: 0; font-weight: 650; overflow-wrap: anywhere; }
-blockquote { margin: 25px 18px 0; padding: 15px; border-left: 3px solid var(--accent); background: var(--soft); text-align: left; font-size: 12px; line-height: 1.6; }
-.privacy-note { margin: 35px 3px 0; padding: 18px; border-radius: 12px; background: var(--soft); color: var(--muted); text-align: left; font-size: 11px; line-height: 1.6; }
-.prototype-note { margin: 14px 6px 0; color: var(--muted); font-size: 10px; line-height: 1.6; text-align: left; }
-
-@media (min-width: 600px) {
-  .app-shell { margin: 24px auto; overflow: hidden; border-radius: 24px; }
-  .screen { min-height: calc(100svh - 48px); }
-}
 @media (max-width: 360px) {
-  .home-screen, .analysis-screen { padding-right: 17px; padding-left: 17px; }
+  .home-screen { padding-right: 17px; padding-left: 17px; }
   .intro h1 { font-size: 34px; }
   .prompt-card { padding-right: 14px; padding-left: 14px; }
   .scenario-list button { padding-right: 9px; padding-left: 9px; }

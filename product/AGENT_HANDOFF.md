@@ -3,6 +3,8 @@
 > Updated: 2026-10-07
 > Purpose: preserve the current product, design, and frontend decisions so the next conversation can continue without replaying the prior discussion.
 
+> Historical snapshot: this handoff predates the current repository layout and frontend initialization. Its `docs/` paths and status statements may be stale; use `../AGENTS.md`, `PRODUCT.md`, `MVP_BRIEF.md`, and the current source tree as authoritative.
+
 ## Current Objective
 
 Begin the real RipePick frontend implementation. The first implementation slice should turn the homepage design direction into a runnable React Native + TypeScript screen, while keeping iOS, iPadOS, and macOS compatibility in view.
@@ -143,10 +145,10 @@ An API such as `POST /api/v1/recommendations` is a reasonable future contract pr
 
 ## Next Conversation Prompt
 
-Start by reading:
+The original next-step prompt was:
 
 ```text
-docs/AGENT_HANDOFF.md
+AGENT_HANDOFF.md
 PRODUCT.md
 MVP_BRIEF.md
 ```
