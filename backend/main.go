@@ -11,5 +11,8 @@ func main() {
 	r.GET("/api/v1/ping", func(c *gin.Context) {
 		c.JSON(http.StatusOK, gin.H{"code": 0, "message": "pong"})
 	})
+
+	r.POST("/api/v1/recommendations", createRecommendation)
 	r.Run(":8080")
+
 }

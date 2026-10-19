@@ -1,0 +1,435 @@
+openapi: 3.1.0
+info:
+  title: RipePick API
+  version: 0.1.0
+  summary: Contextual fruit and breakfast recommendation API
+  description: |-
+    Contract for the RipePick MVP recommendation flow. This document is the
+    source of truth for the HTTP contract; endpoint availability depends on the
+    backend implementation.
+
+    Recommendations provide general healthy-eating information, not medical
+    diagnosis, treatment, or individualized medical advice. Factual claims
+    must be grounded in structured application data or identified sources.
+  license:
+    name: MIT
+  contact:
+    name: RipePick API maintainers
+servers:
+  - url: /api/v1
+    description: Version 1 API base path (resolve against the current host)
+tags:
+  - name: Recommendations
+    description: Contextual fruit and breakfast recommendations
+paths:
+  /recommendations:
+    post:
+      tags: [Recommendations]
+      operationId: createRecommendation
+      summary: Create a contextual fruit and breakfast recommendation
+      description: |-
+        Interprets the user's current eating situation and goal. The operation
+        can return a recommendation, ask one necessary clarification question,
+        or report that the available structured data cannot support a match.
+        The AI service being unavailable is represented by HTTP 503.
+
+        Omit session_id to start a session. The response returns a server-issued
+        session_id. Send that identifier with each subsequent turn, including a
+        clarification answer, so the service can use the minimum relevant
+        conversation context. Send the user's selected option value as message.
+        Sessions are temporary and may expire; clients must handle 404 by
+        asking the user to start a new recommendation. The session is not a
+        persistent health profile.
+      x-maturity: planned
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RecommendationRequest'
+            examples:
+              breakfastContext:
+                summary: Start a recommendation session
+                value:
+                  message: 昨晚吃得比较油腻，今天早上吃什么比较好？
+              clarificationAnswer:
+                summary: Continue the same session with a clarification answer
+                value:
+                  session_id: 5f36d50c-c392-43ec-9a02-79b58ad84173
+                  message: "no"
+      responses:
+        '200':
+          description: Request processed; inspect data.status for the outcome.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RecommendationResponse'
+              examples:
+                recommended:
+                  summary: Recommendation available
+                  value:
+                    code: 0
+                    message: success
+                    data:
+                      session_id: 5f36d50c-c392-43ec-9a02-79b58ad84173
+                      status: recommended
+                      recommendation:
+                        fruit:
+                          id: fruit_example_01
+                          name: 示例水果
+                        breakfast_pairing: 示例早餐搭配（仅用于说明字段结构）
+                        rationale: 根据对应结构化资料生成（仅用于说明字段结构）。
+                        portion_guidance: 按对应资料提供的一般性提示执行（仅用于说明字段结构）。
+                        alternative:
+                          fruit:
+                            id: fruit_example_02
+                            name: 另一种示例水果
+                          breakfast_pairing: 另一种示例早餐搭配
+                        cautions: []
+                        evidence:
+                          - source_id: dataset-record-example
+                            label: 示例结构化数据记录
+                    request_id: 2d94cdb0-7f61-4c31-a4a8-bd19183ed534
+                clarificationRequired:
+                  summary: One decision-relevant clarification is needed
+                  value:
+                    code: 0
+                    message: success
+                    data:
+                      session_id: 5f36d50c-c392-43ec-9a02-79b58ad84173
+                      status: clarification_required
+                      clarification:
+                        context_summary: 昨晚吃得比较油腻，今天早上想吃得清淡些。
+                        question: 你早餐方便搭配乳制品吗？
+                        options:
+                          - label: 可以
+                            value: yes
+                          - label: 不太方便
+                            value: no
+                    request_id: 2d94cdb0-7f61-4c31-a4a8-bd19183ed534
+                noMatch:
+                  summary: Available data does not support a recommendation
+                  value:
+                    code: 0
+                    message: success
+                    data:
+                      session_id: 5f36d50c-c392-43ec-9a02-79b58ad84173
+                      status: no_match
+                      no_match:
+                        explanation: 当前资料不足以支持符合这些条件的推荐。
+                        suggestions:
+                          - 放宽一个饮食条件后再试。
+                    request_id: 2d94cdb0-7f61-4c31-a4a8-bd19183ed534
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/SessionNotFound'
+        '413':
+          $ref: '#/components/responses/ContentTooLarge'
+        '415':
+          $ref: '#/components/responses/UnsupportedMediaType'
+        '429':
+          $ref: '#/components/responses/TooManyRequests'
+        '500':
+          $ref: '#/components/responses/InternalServerError'
+        '503':
+          $ref: '#/components/responses/ServiceUnavailable'
+        default:
+          $ref: '#/components/responses/UnexpectedError'
+
+components:
+  schemas:
+    RecommendationRequest:
+      type: object
+      additionalProperties: false
+      required: [message]
+      properties:
+        session_id:
+          $ref: '#/components/schemas/SessionId'
+        message:
+          type: string
+          minLength: 1
+          maxLength: 2000
+          description: |-
+            User's current eating situation or next conversational turn. When a
+            clarification is pending, send the selected option value or a free-
+            text answer here. Whitespace-only values are invalid.
+          examples:
+            - 昨晚吃得比较油腻，今天早上吃什么比较好？
+            - "no"
+
+    RecommendationResponse:
+      type: object
+      additionalProperties: false
+      required: [code, message, data, request_id]
+      properties:
+        code:
+          type: integer
+          const: 0
+        message:
+          type: string
+          examples: [success]
+        data:
+          oneOf:
+            - $ref: '#/components/schemas/RecommendedResult'
+            - $ref: '#/components/schemas/ClarificationResult'
+            - $ref: '#/components/schemas/NoMatchResult'
+          discriminator:
+            propertyName: status
+            mapping:
+              recommended: '#/components/schemas/RecommendedResult'
+              clarification_required: '#/components/schemas/ClarificationResult'
+              no_match: '#/components/schemas/NoMatchResult'
+        request_id:
+          $ref: '#/components/schemas/RequestId'
+
+    RecommendedResult:
+      type: object
+      additionalProperties: false
+      required: [session_id, status, recommendation]
+      properties:
+        session_id:
+          $ref: '#/components/schemas/SessionId'
+        status:
+          const: recommended
+        recommendation:
+          type: object
+          additionalProperties: false
+          required:
+            - fruit
+            - breakfast_pairing
+            - rationale
+            - portion_guidance
+            - alternative
+            - cautions
+            - evidence
+          properties:
+            fruit:
+              $ref: '#/components/schemas/FruitReference'
+            breakfast_pairing:
+              type: string
+              minLength: 1
+              description: Practical breakfast pairing grounded in application data.
+            rationale:
+              type: string
+              minLength: 1
+              description: Concise explanation; must not make unsupported health claims.
+            portion_guidance:
+              type: string
+              minLength: 1
+              description: General portion guidance; avoid implying a medical prescription.
+            alternative:
+              type: object
+              additionalProperties: false
+              required: [fruit, breakfast_pairing]
+              properties:
+                fruit:
+                  $ref: '#/components/schemas/FruitReference'
+                breakfast_pairing:
+                  type: string
+                  minLength: 1
+            cautions:
+              type: array
+              description: Relevant general cautions, such as known data limitations.
+              items:
+                type: string
+            evidence:
+              type: array
+              minItems: 1
+              description: Structured-data records or identified sources supporting factual claims.
+              items:
+                $ref: '#/components/schemas/EvidenceReference'
+
+    ClarificationResult:
+      type: object
+      additionalProperties: false
+      required: [session_id, status, clarification]
+      properties:
+        session_id:
+          $ref: '#/components/schemas/SessionId'
+        status:
+          const: clarification_required
+        clarification:
+          type: object
+          additionalProperties: false
+          required: [context_summary, question, options]
+          properties:
+            context_summary:
+              type: string
+              description: Brief summary of the user's understood situation.
+            question:
+              type: string
+              minLength: 1
+              description: Ask only for information that can change the recommendation.
+            options:
+              type: array
+              minItems: 1
+              items:
+                type: object
+                additionalProperties: false
+                required: [label, value]
+                properties:
+                  label:
+                    type: string
+                  value:
+                    type: string
+
+    NoMatchResult:
+      type: object
+      additionalProperties: false
+      required: [session_id, status, no_match]
+      properties:
+        session_id:
+          $ref: '#/components/schemas/SessionId'
+        status:
+          const: no_match
+        no_match:
+          type: object
+          additionalProperties: false
+          required: [explanation, suggestions]
+          properties:
+            explanation:
+              type: string
+              description: Explain the data or constraint gap without inventing facts.
+            suggestions:
+              type: array
+              items:
+                type: string
+
+    FruitReference:
+      type: object
+      additionalProperties: false
+      required: [id, name]
+      properties:
+        id:
+          type: string
+          minLength: 1
+          description: Stable identifier for a fruit in the application dataset.
+        name:
+          type: string
+          minLength: 1
+
+    EvidenceReference:
+      type: object
+      additionalProperties: false
+      required: [source_id, label]
+      properties:
+        source_id:
+          type: string
+          minLength: 1
+          description: Stable identifier for the structured record or identified source.
+        label:
+          type: string
+          minLength: 1
+
+    ErrorEnvelope:
+      type: object
+      additionalProperties: false
+      required: [code, message, data, request_id]
+      properties:
+        code:
+          type: integer
+          description: Stable application error code; 400xx client, 429xx rate limit, 500xx server.
+          minimum: 40000
+        message:
+          type: string
+          description: Safe, user-readable error summary; must not expose internal details.
+        data:
+          type: 'null'
+        request_id:
+          $ref: '#/components/schemas/RequestId'
+
+    RequestId:
+      type: string
+      format: uuid
+      description: Identifier for correlating this request with service logs.
+
+    SessionId:
+      type: string
+      format: uuid
+      description: |-
+        Opaque server-issued identifier for a temporary conversation session.
+        Treat it as sensitive, do not log it, and do not use it as a user or
+        health-profile identifier. The session can expire; its retention period
+        is a product/deployment policy and is not currently fixed by this API.
+
+  responses:
+    BadRequest:
+      description: Invalid request body or message is empty after trimming.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorEnvelope'
+          examples:
+            validationError:
+              value:
+                code: 40001
+                message: message must not be empty
+                data: null
+                request_id: 2d94cdb0-7f61-4c31-a4a8-bd19183ed534
+    SessionNotFound:
+      description: Session identifier is unknown or has expired; start a new recommendation session.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorEnvelope'
+          examples:
+            expiredSession:
+              value:
+                code: 40401
+                message: Recommendation session not found or expired
+                data: null
+                request_id: 2d94cdb0-7f61-4c31-a4a8-bd19183ed534
+    ContentTooLarge:
+      description: Request body exceeds the supported size limit.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorEnvelope'
+    UnsupportedMediaType:
+      description: Request Content-Type must be application/json.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorEnvelope'
+    TooManyRequests:
+      description: Request rate limit exceeded.
+      headers:
+        Retry-After:
+          schema:
+            type: integer
+          description: Suggested delay in seconds before retrying.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorEnvelope'
+    InternalServerError:
+      description: Unexpected internal failure.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorEnvelope'
+    ServiceUnavailable:
+      description: Recommendation or AI service is temporarily unavailable.
+      headers:
+        Retry-After:
+          schema:
+            type: integer
+          description: Suggested delay in seconds before retrying, when known.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorEnvelope'
+          examples:
+            unavailable:
+              value:
+                code: 50301
+                message: Recommendation service is temporarily unavailable
+                data: null
+                request_id: 2d94cdb0-7f61-4c31-a4a8-bd19183ed534
+    UnexpectedError:
+      description: Unexpected HTTP error using the standard error envelope.
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/ErrorEnvelope'
