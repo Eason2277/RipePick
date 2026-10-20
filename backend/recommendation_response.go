@@ -39,3 +39,35 @@ type RecommendationAlt struct {
 	Fruit            FruitReference `json:"fruit"`
 	BreakfastPairing string         `json:"breakfast_pairing"`
 }
+
+const StatusClarificationRequired RecommendationStatus = "clarification_required"
+
+type ClarificationResult struct {
+	SessionID     string               `json:"session_id"`
+	Status        RecommendationStatus `json:"status"`
+	Clarification ClarificationDetail  `json:"clarification"`
+}
+
+type ClarificationDetail struct {
+	ContextSummary string                `json:"context_summary"`
+	Question       string                `json:"question"`
+	Options        []ClarificationOption `json:"options"`
+}
+
+type ClarificationOption struct {
+	Label string `json:"label"`
+	Value string `json:"value"`
+}
+
+const StatusNoMatch RecommendationStatus = "no_match"
+
+type NoMatchResult struct {
+	SessionID string               `json:"session_id"`
+	Status    RecommendationStatus `json:"status"`
+	NoMatch   NoMatchDetail        `json:"no_match"`
+}
+
+type NoMatchDetail struct {
+	Explanation string   `json:"explanation"`
+	Suggestions []string `json:"suggestions"`
+}
