@@ -19,7 +19,7 @@ type EvidenceReference struct {
 // RecommendedResult 表示 data.status == "recommended" 时返回的 data。
 type RecommendedResult struct {
 	SessionID      string               `json:"session_id"`
-	Status         string               `json:"status"`
+	Status         RecommendationStatus `json:"status"`
 	Recommendation RecommendationDetail `json:"recommendation"`
 }
 
